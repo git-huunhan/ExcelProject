@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+@model ExcelProject.Areas.Admin.Models.LoginModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Split Excel Data | Đăng nhập</title>
+    <link href="~/Assets/admin/css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="~/Assets/admin/Excel_icon.png" type="image/icon type">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Đăng nhập</h3></div>
+                                <div class="card-body">
+                                    @using (Html.BeginForm())
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                                        <fieldset>
+
+                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Tên đăng nhập</label>
+                                                @Html.TextBoxFor(model=>model.UserName, new { @class = "form-control py-4", @placeholder = "Enter email address", @id = "inputEmailAddress"})    
+                                            </div>
+                                            <div class="form-group"><label class="small mb-1" for="inputPassword">Mật khẩu</label>
+                                                @Html.TextBoxFor(model => model.Password, new { @class = "form-control py-4", @placeholder = "Enter password", @id = "inputPassword", @type = "password" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.CheckBoxFor(model => model.RememberMe)
+                                                Nhớ tài khoản
+                                            </div>
+                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"><a class="small" href="password.html">Quên mật khẩu?</a><button type="submit" class="btn btn-dark" href="index.html">Đăng nhập</button></div>
+                                        </fieldset> 
+                                    }
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="small"><a href="register.html">Bạn chưa có tài khoản? Đăng ký ngay!</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
