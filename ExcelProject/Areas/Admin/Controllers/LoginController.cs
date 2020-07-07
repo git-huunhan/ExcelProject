@@ -25,7 +25,7 @@ namespace ExcelProject.Areas.Admin.Controllers
             if (result && ModelState.IsValid)
             {
                 SessionHelper.SetSession(new UserSession() { UserName = model.UserName });
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ReadExcelUsingEpplus", "Home");
             }
             else
             {

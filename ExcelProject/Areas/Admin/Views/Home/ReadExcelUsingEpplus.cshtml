@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Split Excel Data | Import</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="card mt-3">
+                <div class="card-header">Tải lên tập tin Excel</div>
+                <div class="card-body">
+                    <div class="custom-file mb-4">
+                        <input type="file" class="custom-file-input" id="dataFile" name="upload">
+                        <label class="custom-file-label" for="dataFile">Chọn tập tin</label>
+                    </div>
+
+                    <div class="custom-file">
+                        <input type="submit" name="btnupload" value="Nhập tập tin" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script>
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            $('.custom-file-label').html(fileName);
+        });
+    </script>
+</body>
+</html>

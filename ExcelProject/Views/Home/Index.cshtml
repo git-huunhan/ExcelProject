@@ -1,8 +1,92 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Assets/admin/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Assets/admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Assets/admin/css/magnific-popup.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Assets/admin/css/style.css">
+    <link rel="icon" href="~/Assets/admin/Excel_icon.png" type="image/icon type">
+    <title>Split Excel Data | Trang Chủ</title>
+    <title>Document</title>
+</head>
+<body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="Index#"><img alt="">Split Excel Data</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-center">
+                            <li class="nav-item active"><a class="nav-link" href="Index#">Trang Chủ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../About/Index#">Team</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item"><a href="/Admin/Login/Index#" class="primary_btn text-uppercase">Đăng Nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="banner_content">
+                            <h2>
+                                HỆ THỐNG <br>
+                                TÁCH FILE
+                            </h2>
+                            <p>
+                                Hệ thống này cho phép nhập vào một file excel bất kỳ và chia tách thành các file theo các trường yêu cầu.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <a class="primary_btn" href="/Admin/Home/ReadExcelUsingEpplus"><span>Bắt Đầu</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="home_right_img">
+                            <img class="img-fluid" src="~/Assets/admin/img/banner/home-right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+    <script src="~/Assets/admin/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Assets/admin/js/popper.js"></script>
+    <script src="~/Assets/admin/js/bootstrap.min.js"></script>
+    <script src="~/Assets/admin/js/stellar.js"></script>
+    <script src="~/Assets/admin/js/jquery.magnific-popup.min.js"></script>
 
+    <script src="~/Assets/admin/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Assets/admin/js/mail-script.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="~/Assets/admin/js/gmaps.min.js"></script>
+    <script src="~/Assets/admin/js/theme.js"></script>
+</body>
+</html>
